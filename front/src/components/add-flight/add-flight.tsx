@@ -33,10 +33,10 @@ const validate = (values: FlightFormData) => {
     if (!values.departureTime) {
         errors.departureTime = "Departure time is required.";
     }
-    //
-    //  else if (dayjs(values.departureTime).isBefore(dayjs())) {
-    //     errors.departureTime = "Departure time must be in the future.";
-    // }
+    
+     else if (dayjs(values.departureTime).isBefore(dayjs())) {
+        errors.departureTime = "Departure time must be in the future.";
+    }
 
     return errors;
 };

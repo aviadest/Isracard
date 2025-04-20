@@ -6,7 +6,7 @@ import { Flight } from "../../entities/Flight";
 import { apiUrl, DeleteFlightApi } from "../../Services/api.service";
 import { getStatusByDepartureTime } from "../../Services/utils.service";
 import "./flight-board.scss";
-import FilterForm from "../search/filter-form";
+import FilterForm from "../filter-form/filter-form";
 
 function FlightBoard() {
     const [flights, setFlights] = useState<Flight[]>([]);
@@ -96,8 +96,7 @@ function FlightBoard() {
     useEffect(() => {
         const interval = setInterval(() => {
             updateStatuses();
-        // }, 120000); // 2 minutes
-        }, 4000); // 444444444444444444444
+        }, 120000);
         return () => clearInterval(interval);
     }, [flights]);
 
