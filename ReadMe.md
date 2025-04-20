@@ -13,6 +13,8 @@ This project is a Flight Board application that provides real-time flight update
 	• POST /flights Adds a new flight record with proper validations.
 	• DELETE /flights/{id} Deletes (or marks as deleted) a flight based on its ID.
   
+  -** Examples: **
+  able to run test from FlightBoard.http file 
   
   
 - **Frontend**: React + Vite + TS

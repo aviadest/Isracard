@@ -1,17 +1,4 @@
-@FlightBoard_HostAddress = http://localhost:5085
-
-GET {{FlightBoard_HostAddress}}/api/flights
-Accept: application/json
-
-###
-
-
-
-
-
-
-
-
+@FlightBoard_HostAddress = https://localhost:7233
 
 ### Get all flights
 GET {{FlightBoard_HostAddress}}/api/flights
@@ -24,9 +11,8 @@ Content-Type: application/json
     "FlightNumber": 1234,
     "Destination": "Berlin",
     "DepartureTime": "2026-04-18T22:00:00",
-    "Gate": "D7",
-    "IsDeleted": false
+    "Gate": "D7"
 }
 
 ### Delete a flight by ID
-DELETE {{FlightBoard_HostAddress}}/api/flights/delete/1
+DELETE {{FlightBoard_HostAddress}}/api/flights/1
