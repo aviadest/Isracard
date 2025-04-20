@@ -1,0 +1,36 @@
+# Visual Studio specific
+.vs/
+*.vcxproj
+*.csproj.user
+
+# ASP.NET Core specific
+bin/
+obj/
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Logs
+*.log
+
+# User-specific files
+*.swp
+*.swo
+
+# Configuration
+appsettings*.json
+
+# JetBrains Rider files
+.idea/
+
+# Build files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.caches
+
+# IDE specific files
+*.sln.ide

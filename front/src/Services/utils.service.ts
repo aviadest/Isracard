@@ -1,0 +1,16 @@
+export type FlightStatus = "Scheduled" | "Boarding" | "Departed" | "Landed" | "Delayed";
+
+export function getStatusByDepartureTime(departureTime: Date): FlightStatus {
+    const now = new Date();
+    const diff = (departureTime.getTime() - now.getTime()) / 60000;
+    if (diff > 30) return "Scheduled";
+    if (diff > 10) return "Boarding";
+    if (diff >= -60) return "Departed";
+    if (diff < -60) return "Landed";
+    if (diff < -15) return "Delayed";
+    return "Scheduled";
+}
+
+export function onChangeFlightNumber(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    e.target.value = e.target.value.replace(/\D/g, "").slice(0, 9);
+}
